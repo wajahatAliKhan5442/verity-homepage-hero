@@ -1,0 +1,32 @@
+/* The CURRENT live homepage hero (Elementor container 9397c1f), measured from veritylifesolutions.com.
+   Options D and E keep this design and change only the words and the benefit strip. */
+.cur-hero {
+  background: url("hero-pattern-bg.jpg") 50% 50% / cover no-repeat;
+  padding: 68px 29px 92px;
+  text-align: center;
+}
+.cur-inner { max-width: 1382px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+.cur-hero h1 { margin: 0; max-width: 1120px; color: #253746; font: 700 72px/90px "Inter Tight", sans-serif; }
+.cur-hero h1 .sub { display: block; font-size: 40px; line-height: 52px; }
+.cur-bar { width: 780px; max-width: 100%; height: 10px; background: #FB7F05; margin-top: 20px; }
+.cur-lede { margin: 24px 0 0; max-width: 860px; color: #253746; font: 600 20px/30px "Inter Tight", sans-serif; }
+.cur-btns { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; padding: 10px; margin-top: 10px; }
+.cur-btn { display: inline-flex; align-items: center; border-radius: 15px; padding: 19px 25px 18px; border: 1px solid #253746; font: 700 18px/1 Helvetica, Arial, sans-serif; text-transform: capitalize; text-decoration: none; transition: filter .2s ease; }
+.cur-btn:hover { filter: brightness(1.06); }
+.cur-btn.orange { background: #FB7F05; color: #000; }
+.cur-btn.navy { background: #253746; color: #fff; }
+
+@media (max-width: 1024px) {
+  .cur-hero h1 { font-size: 52px; line-height: 64px; }
+  .cur-hero h1 .sub { font-size: 32px; line-height: 42px; }
+}
+@media (max-width: 767px) {
+  .cur-hero { padding: 40px 10px 50px; }
+  .cur-hero h1 { font-size: 30px; line-height: 38px; }
+  .cur-hero h1 .sub { font-size: 20px; line-height: 28px; margin-top: 4px; }
+  .cur-bar { width: 296px; }
+  .cur-lede { font-size: 16px; line-height: 25px; padding: 0 10px; }
+  .cur-btn { font-size: 13px; padding: 15px 20px; width: auto; }
+}
+.br-m { display: none; }
+@media (max-width: 767px) { .br-m { display: inline; } }

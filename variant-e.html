@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Homepage hero — Option E (current design, new text) | Verity Life Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/chrome.css">
+<link rel="stylesheet" href="assets/current-hero.css">
+<style>
+  /* benefit strip in the style of option C: navy tiles (site navy #253746, same as the book button) */
+  .benefits { list-style: none; margin: 34px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 180px); gap: 16px; justify-content: center; }
+  .benefits li { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 20px 10px 18px; border-radius: 16px; background: #253746; box-shadow: 0 10px 24px rgba(37, 55, 70, .22); }
+  .benefits .circle { width: 56px; height: 56px; border-radius: 50%; background: rgba(251, 127, 5, .16); border: 1px solid rgba(251, 127, 5, .45); display: grid; place-items: center; }
+  .benefits svg { width: 30px; height: 30px; }
+  .benefits span:last-child { font: 700 16px/1.25 "Inter", sans-serif; color: #fff; }
+  .tagline { margin: 30px 0 0; display: flex; align-items: center; justify-content: center; gap: 16px; font: 700 16px/1.3 "Inter", sans-serif; letter-spacing: 3.5px; text-transform: uppercase; color: #253746; }
+  .tagline::before, .tagline::after { content: ""; width: 48px; height: 4px; border-radius: 2px; background: #FB7F05; flex: none; }
+  @media (max-width: 767px) {
+    .benefits { grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 26px; width: 100%; padding: 0 10px; }
+    .benefits li { padding: 16px 8px 14px; gap: 10px; }
+    .benefits .circle { width: 50px; height: 50px; }
+    .benefits svg { width: 27px; height: 27px; }
+    .benefits span:last-child { font-size: 15px; }
+    .tagline { font-size: 12px; letter-spacing: 2px; gap: 10px; margin-top: 24px; padding: 0 10px; }
+    .tagline::before, .tagline::after { width: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><a href="#"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M224 256a128 128 0 1 0 0-256 128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3 0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304h-91.4z"/></svg>Client Community</a></div>
+<header class="site-header">
+  <div class="inner">
+    <a class="logo" href="#"><img src="assets/logo-dark.png" alt="Verity Life Solutions" width="717" height="231"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#" aria-current="page">Home</a><a href="#">Meet Our Team</a><a href="#">Testimonials</a><a href="#">Upcoming Events</a><a href="#">Contact Us</a><a href="#">Blog</a><a href="#">Store<span class="badge">NEW</span></a>
+    </nav>
+    <a class="cart" href="#" aria-label="Cart"><svg viewBox="0 0 576 512" aria-hidden="true"><path d="M0 24C0 10.7 10.7 0 24 0h45.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zm128 440a48 48 0 1 1 96 0 48 48 0 1 1-96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg><span>0</span></a>
+    <a class="btn-v1" href="#">Free Training</a>
+    <button class="menu-toggle" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+  </div>
+</header>
+
+<!-- ================= OPTION E — current hero design, new words; benefit strip styled like option C =================
+     ELEMENTOR: same edits as option D, but the 4 Icon Boxes get a navy (#253746) box background, radius 16,
+     orange icon in a translucent orange circle and white title; tagline Heading with orange dividers either side. -->
+<section class="cur-hero" aria-labelledby="hero-title">
+  <div class="cur-inner">
+    <h1 id="hero-title">Turning Expenses<br class="br-m"> into Wealth <span class="sub">for Individuals and Business Owners</span></h1>
+    <div class="cur-bar" aria-hidden="true"></div>
+    <p class="cur-lede">Using our Capital Growth Method, so you can keep more money, grow more money, have greater control over your money and protect your wealth from future taxes.</p>
+    <div class="cur-btns">
+      <a class="cur-btn orange" href="#">Watch Our Free Training</a>
+      <a class="cur-btn navy" href="#">Get Your Free Copy Of Our Book</a>
+    </div>
+    <ul class="benefits">
+      <li><span class="circle"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="20" cy="12" rx="11" ry="4"/><path d="M9 12v6c0 2.2 4.9 4 11 4s11-1.8 11-4v-6M9 18v6c0 2.2 4.9 4 11 4 1.4 0 2.8-.1 4-.3M9 24v6c0 2.2 4.9 4 11 4 1 0 2-.1 3-.2M9 30v6c0 2.2 4.9 4 11 4 1.2 0 2.4-.1 3.5-.2"/><circle cx="35" cy="34" r="8"/><path d="M35 30v8M31 34h8"/></svg></span><span>Keep More Money</span></li>
+      <li><span class="circle"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40h32"/><rect x="10" y="30" width="6" height="10" rx="1"/><rect x="21" y="24" width="6" height="16" rx="1"/><rect x="32" y="18" width="6" height="22" rx="1"/><path d="M10 22l9-7 6 4 13-10"/><path d="M32 9h6v6"/></svg></span><span>Grow More Money</span></li>
+      <li><span class="circle"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="6"/><path d="M24 6l3 5 6-1 1 6 5 3-3 5 3 5-5 3-1 6-6-1-3 5-3-5-6 1-1-6-5-3 3-5-3-5 5-3 1-6 6 1z"/></svg></span><span>Greater Control</span></li>
+      <li><span class="circle"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/></svg></span><span>Protect from Future Taxes</span></li>
+    </ul>
+    <p class="tagline">Power Your Future Without Sacrificing Today.</p>
+  </div>
+</section>
+
+<div class="context">
+  <span class="label">Existing homepage section (unchanged)</span>
+  <picture>
+    <source media="(max-width: 767px)" srcset="assets/context-mobile.jpg">
+    <img src="assets/context-desktop.jpg" alt="Existing section: Watch This Video To Understand Why Your Money Is Leaving You" width="1440" height="780">
+  </picture>
+</div>
+
+</body>
+</html>
