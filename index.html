@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Homepage hero options | Verity Life Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --orange: #FB7F05; --orange-text: #B35500; --navy: #122030; --text: #2B3445; --muted: #5E6E80; --cream: #F8F6F1; --line: #E9E4DA; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--text); font: 400 17px/1.55 "Inter", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  .top { background: var(--navy); padding: 18px 24px; }
+  .top img { height: 44px; width: auto; display: block; }
+  main { max-width: 1200px; margin: 0 auto; padding: 56px 24px 72px; }
+  .eyebrow { margin: 0 0 10px; font: 700 13px "Inter", sans-serif; letter-spacing: 2px; text-transform: uppercase; color: var(--orange-text); }
+  h1 { margin: 0; color: var(--navy); font: 800 44px/1.1 "Inter Tight", sans-serif; letter-spacing: -1px; }
+  .intro { max-width: 720px; margin: 16px 0 0; color: var(--text); }
+  .cards { margin-top: 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; box-shadow: 0 10px 30px rgba(18, 32, 48, .07); transition: transform .2s ease, box-shadow .2s ease; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(18, 32, 48, .13); }
+  .card img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block; border-bottom: 1px solid var(--line); }
+  .card .body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .card h2 { margin: 0; font: 800 22px/1.2 "Inter Tight", sans-serif; color: var(--navy); }
+  .card h2 span { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; background: var(--orange); color: var(--navy); font-size: 16px; margin-right: 8px; }
+  .card p { margin: 0; font-size: 15px; color: var(--muted); flex: 1; }
+  .card .go { margin-top: 6px; font: 700 15px "Inter", sans-serif; color: var(--navy); }
+  .card .go::after { content: " →"; color: var(--orange); }
+  .extra { margin-top: 36px; font-size: 15px; color: var(--muted); }
+  .extra a { color: var(--navy); font-weight: 600; }
+  @media (max-width: 900px) { .cards { grid-template-columns: 1fr; } h1 { font-size: 34px; } main { padding: 40px 20px 56px; } }
+</style>
+</head>
+<body>
+<div class="top"><img src="assets/logo-white.svg" alt="Verity Life Solutions" width="166" height="54"></div>
+<main>
+  <p class="eyebrow">Homepage · top section</p>
+  <h1>Turning Expenses into Wealth: 3 options</h1>
+  <p class="intro">Each option uses the same words, the site’s fonts and the Verity orange and navy. Open one to see it on desktop. Every page also works on phones, so try it on your mobile too. Below the new section, each page shows the current homepage continuing as it is today.</p>
+
+  <div class="cards">
+    <a class="card" href="variant-a.html">
+      <img src="preview/thumb-a.jpg" alt="Option A preview" width="900" height="562">
+      <div class="body">
+        <h2><span>A</span>Your mockup</h2>
+        <p>Built as designed: centered text on white with the family photo on the right.</p>
+        <span class="go">View option A</span>
+      </div>
+    </a>
+    <a class="card" href="variant-b.html">
+      <img src="preview/thumb-b.jpg" alt="Option B preview" width="900" height="562">
+      <div class="body">
+        <h2><span>B</span>How it works</h2>
+        <p>Headline on the left. On the right, a simple picture of the method: everyday money → The Capital Growth Method → every dollar keeps working for you. Includes the IBC Authorized Practitioner seal.</p>
+        <span class="go">View option B</span>
+      </div>
+    </a>
+    <a class="card" href="variant-c.html">
+      <img src="preview/thumb-c.jpg" alt="Option C preview" width="900" height="562">
+      <div class="body">
+        <h2><span>C</span>Premium dark</h2>
+        <p>Navy background with the family photo, white headline and orange sub-line. The boldest of the three.</p>
+        <span class="go">View option C</span>
+      </div>
+    </a>
+  </div>
+
+  <p class="extra">Side by side: <a href="preview/compare-desktop.jpg">desktop</a> · <a href="preview/compare-mobile.jpg">mobile</a>. Draft samples only; nothing on veritylifesolutions.com has changed.</p>
+</main>
+</body>
+</html>

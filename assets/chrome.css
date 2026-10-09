@@ -1,0 +1,65 @@
+/* Shared by the hero variants: brand tokens, mocked live header, buttons, "existing section" context strip. */
+:root {
+  --orange: #FB7F05;        /* site primary */
+  --orange-text: #E06F00;   /* orange text on white: AA for large bold text */
+  --navy: #122030;
+  --navy-2: #1A2C42;
+  --text: #2B3445;
+  --muted: #5E6E80;
+  --cream: #F8F6F1;
+  --peach: #FDF1E7;
+  --peach-line: #F7DCC3;
+  --line: #E9E4DA;
+  --v1-navy: #253746;
+  --v1-topbar: #36454F;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: var(--text); font: 400 17px/1.5 "Inter", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 4px; }
+
+/* live global header (mock, unchanged) */
+.topbar { background: var(--v1-topbar); color: #fff; height: 50px; display: flex; align-items: center; justify-content: flex-end; padding: 0 12px; }
+.topbar a { display: inline-flex; align-items: center; gap: 8px; font: 700 17px "Inter", sans-serif; text-decoration: none; color: #fff; }
+.topbar svg { width: 15px; height: 15px; fill: currentColor; }
+.site-header { background: #fff; position: relative; z-index: 20; }
+.site-header .inner { max-width: 1440px; margin: 0 auto; padding: 22px 32px; display: flex; align-items: center; gap: 28px; }
+.site-header .logo img { width: 236px; height: auto; }
+.nav { flex: 1; display: flex; justify-content: center; gap: 30px; }
+.nav a { font: 600 17px "Inter", sans-serif; color: var(--v1-navy); text-decoration: none; white-space: nowrap; position: relative; }
+.nav a[aria-current="page"] { color: var(--orange); }
+.nav .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #F58A3C; color: #fff; font: 700 8px "Inter", sans-serif; padding: 2px 6px; border-radius: 999px; }
+.cart { position: relative; color: var(--v1-navy); display: inline-flex; }
+.cart svg { width: 26px; height: 26px; fill: currentColor; }
+.cart span { position: absolute; top: -8px; right: -9px; background: #D9534F; color: #fff; font: 700 10px "Inter", sans-serif; width: 17px; height: 17px; border-radius: 50%; display: grid; place-items: center; }
+.btn-v1 { background: var(--orange); color: #292929; border: 1px solid var(--v1-navy); border-radius: 15px; padding: 17px 26px; font: 700 18px/1 "Montserrat", sans-serif; text-decoration: none; white-space: nowrap; }
+.menu-toggle { display: none; background: none; border: 0; padding: 6px; color: var(--v1-navy); }
+.menu-toggle svg { width: 26px; height: 26px; }
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 12px; padding: 18px 32px; font: 700 17px/1 "Inter", sans-serif; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--orange); color: var(--navy); box-shadow: 0 8px 22px rgba(251, 127, 5, .3); }
+.btn-dark { background: var(--navy); color: #fff; }
+.btn-ghost { color: #fff; border: 1.5px solid rgba(255, 255, 255, .55); }
+.btn-ghost:hover { background: rgba(255, 255, 255, .08); border-color: #fff; }
+
+/* the live section below the hero, unchanged */
+.context { position: relative; border-top: 1px dashed #D9DEE5; }
+.context img { width: 100%; max-width: 1440px; margin: 0 auto; }
+.context .label { position: absolute; top: 12px; left: 12px; background: #fff; border: 1px solid #D9DEE5; border-radius: 999px; padding: 6px 12px; font: 600 12px "Inter", sans-serif; color: var(--muted); }
+
+/* benefit icons (shared SVG style) */
+.ico { fill: none; stroke: var(--orange); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+@media (max-width: 1180px) {
+  .nav, .site-header .btn-v1 { display: none; }
+  .menu-toggle { display: inline-flex; }
+  .site-header .inner { justify-content: space-between; padding: 14px 20px; }
+  .site-header .logo img { width: 170px; }
+}
+@media (max-width: 767px) {
+  .topbar { height: 38px; }
+  .topbar a { font-size: 13px; }
+  .btn { width: 100%; }
+}

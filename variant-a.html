@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Homepage hero — Variant A (client mockup) | Verity Life Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Inter Tight + Inter = fonts the homepage already uses. Montserrat only for the mocked global header button. -->
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #FB7F05;        /* site primary — rules, icons, button fill */
+    --orange-text: #E06F00;   /* eyebrow: 3.26:1, passes AA for large bold text */
+    --navy: #122030;          /* mockup heading navy */
+    --text: #2B3445;          /* mockup paragraph */
+    --peach: #FDF1E7;         /* icon circles */
+    --peach-line: #F7DCC3;
+    --v1-navy: #253746;
+    --v1-topbar: #36454F;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #fff; color: var(--text); font: 400 17px/1.5 "Inter", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 4px; }
+
+  /* ---------- live global header (mock, unchanged) ---------- */
+  .topbar { background: var(--v1-topbar); color: #fff; height: 50px; display: flex; align-items: center; justify-content: flex-end; padding: 0 12px; }
+  .topbar a { display: inline-flex; align-items: center; gap: 8px; font: 700 17px "Inter", sans-serif; text-decoration: none; color: #fff; }
+  .topbar svg { width: 15px; height: 15px; fill: currentColor; }
+  .site-header { background: #fff; position: relative; z-index: 20; }
+  .site-header .inner { max-width: 1440px; margin: 0 auto; padding: 22px 32px; display: flex; align-items: center; gap: 28px; }
+  .site-header .logo img { width: 236px; height: auto; }
+  .nav { flex: 1; display: flex; justify-content: center; gap: 30px; }
+  .nav a { font: 600 17px "Inter", sans-serif; color: var(--v1-navy); text-decoration: none; white-space: nowrap; position: relative; }
+  .nav a[aria-current="page"] { color: var(--orange); }
+  .nav .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #F58A3C; color: #fff; font: 700 8px "Inter", sans-serif; padding: 2px 6px; border-radius: 999px; }
+  .cart { position: relative; color: var(--v1-navy); display: inline-flex; }
+  .cart svg { width: 26px; height: 26px; fill: currentColor; }
+  .cart span { position: absolute; top: -8px; right: -9px; background: #D9534F; color: #fff; font: 700 10px "Inter", sans-serif; width: 17px; height: 17px; border-radius: 50%; display: grid; place-items: center; }
+  .btn-v1 { background: var(--orange); color: #292929; border: 1px solid var(--v1-navy); border-radius: 15px; padding: 17px 26px; font: 700 18px/1 "Montserrat", sans-serif; text-decoration: none; white-space: nowrap; }
+  .menu-toggle { display: none; background: none; border: 0; padding: 6px; color: var(--v1-navy); }
+  .menu-toggle svg { width: 26px; height: 26px; }
+
+  /* ================= NEW HERO ================= */
+  .hero { position: relative; overflow: hidden; background: #fff; padding: 72px 24px 64px; }
+  .hero-photo {
+    position: absolute; top: 0; right: 0; bottom: 0; width: 40%;
+    background: url("assets/hero-a-family-meadow.jpg") 73% 100% / cover no-repeat;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 45%);
+            mask-image: linear-gradient(to right, transparent 0%, #000 45%);
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; text-align: center; transform: translateX(-11%); }
+  .eyebrow { margin: 0; font: 700 19px/1.2 "Inter", sans-serif; letter-spacing: 4px; text-transform: uppercase; color: var(--orange-text); }
+  .eyebrow-rule { width: 120px; height: 3px; background: var(--orange); border-radius: 3px; margin: 14px auto 22px; }
+  h1 { margin: 0; color: var(--navy); font: 800 60px/1.04 "Inter Tight", sans-serif; letter-spacing: -1.5px; }
+  h1 .sub { display: block; margin-top: 8px; font-size: 34px; font-weight: 700; letter-spacing: -.6px; line-height: 1.15; }
+  .lede { max-width: 860px; margin: 22px auto 0; font-size: 20px; line-height: 1.5; color: var(--text); }
+  .benefits { list-style: none; margin: 34px auto 0; padding: 0; display: flex; justify-content: center; gap: 40px; }
+  .benefits li { width: 150px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .benefits .circle { width: 88px; height: 88px; border-radius: 50%; background: var(--peach); border: 1px solid var(--peach-line); display: grid; place-items: center; }
+  .benefits svg { width: 42px; height: 42px; fill: none; stroke: var(--orange); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .benefits span { font: 700 19px/1.2 "Inter", sans-serif; color: var(--navy); }
+  .rule { width: 720px; max-width: 100%; height: 6px; border-radius: 3px; background: var(--orange); margin: 34px auto 18px; }
+  .tagline { margin: 0; font: 700 19px/1.3 "Inter", sans-serif; letter-spacing: 4px; text-transform: uppercase; color: var(--navy); }
+  .ctas { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 12px; padding: 18px 32px; font: 700 17px/1 "Inter", sans-serif; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--orange); color: var(--navy); box-shadow: 0 8px 22px rgba(251, 127, 5, .3); }
+  .btn-dark { background: var(--navy); color: #fff; }
+  .addition { display: inline-block; margin-top: 10px; font: 500 12px "Inter", sans-serif; color: #8A94A3; }
+
+  /* ---------- context: the live section below, unchanged ---------- */
+  .context { position: relative; border-top: 1px dashed #D9DEE5; }
+  .context img { width: 100%; max-width: 1440px; margin: 0 auto; }
+  .context .label { position: absolute; top: 12px; left: 12px; background: #fff; border: 1px solid #D9DEE5; border-radius: 999px; padding: 6px 12px; font: 600 12px "Inter", sans-serif; color: #5E6E80; }
+
+  /* ---------- responsive: photo moves below the text ---------- */
+  @media (max-width: 1180px) {
+    .nav, .site-header .btn-v1 { display: none; }
+    .menu-toggle { display: inline-flex; }
+    .site-header .inner { justify-content: space-between; padding: 14px 20px; }
+    .site-header .logo img { width: 170px; }
+  }
+  @media (max-width: 1100px) {
+    .hero { padding: 48px 24px 0; }
+    .hero-inner { transform: none; }
+    .hero-photo { position: relative; width: auto; height: 340px; margin: 32px -24px 0; background-position: 72% 70%;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 45%); mask-image: linear-gradient(to bottom, transparent 0%, #000 45%); }
+    h1 { font-size: 54px; }
+    h1 .sub { font-size: 32px; }
+  }
+  @media (max-width: 767px) {
+    .topbar { height: 38px; }
+    .topbar a { font-size: 13px; }
+    .hero { padding: 36px 20px 0; }
+    .eyebrow { font-size: 14px; letter-spacing: 2.5px; }
+    .eyebrow-rule { width: 80px; margin: 12px auto 18px; }
+    h1 { font-size: 38px; letter-spacing: -1px; }
+    h1 .sub { font-size: 23px; letter-spacing: -.3px; }
+    .lede { font-size: 16px; margin-top: 16px; }
+    .benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 12px; margin-top: 28px; }
+    .benefits li { width: auto; gap: 10px; }
+    .benefits .circle { width: 70px; height: 70px; }
+    .benefits svg { width: 34px; height: 34px; }
+    .benefits span { font-size: 16px; }
+    .rule { height: 5px; margin: 26px auto 14px; }
+    .tagline { font-size: 13px; letter-spacing: 2.2px; }
+    .ctas { flex-direction: column; margin-top: 24px; }
+    .btn { width: 100%; }
+    .hero-photo { height: 240px; margin: 24px -20px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== live global header (unchanged; mock for context) ===== -->
+<div class="topbar"><a href="#"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M224 256a128 128 0 1 0 0-256 128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3 0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304h-91.4z"/></svg>Client Community</a></div>
+<header class="site-header">
+  <div class="inner">
+    <a class="logo" href="#"><img src="assets/logo-dark.png" alt="Verity Life Solutions" width="717" height="231"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#" aria-current="page">Home</a><a href="#">Meet Our Team</a><a href="#">Testimonials</a><a href="#">Upcoming Events</a><a href="#">Contact Us</a><a href="#">Blog</a><a href="#">Store<span class="badge">NEW</span></a>
+    </nav>
+    <a class="cart" href="#" aria-label="Cart"><svg viewBox="0 0 576 512" aria-hidden="true"><path d="M0 24C0 10.7 10.7 0 24 0h45.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zm128 440a48 48 0 1 1 96 0 48 48 0 1 1-96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg><span>0</span></a>
+    <a class="btn-v1" href="#">Free Training</a>
+    <button class="menu-toggle" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+  </div>
+</header>
+
+<!-- ================= NEW HERO (replaces the current homepage hero) =================
+     ELEMENTOR: Container (full width, white, overflow hidden, padding 56/24/64) · photo = absolutely positioned
+     child Container with background image + mask (Custom CSS) · inner Container boxed 980, centered:
+     Heading H1 (sub line in <span>) · Text Editor · Icon Box ×4 (row)
+     · Divider 760×6 · Heading (tagline) · Button ×2 -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-inner">
+    <!-- client (Loom 0:23–0:37): remove the "THE CAPITAL GROWTH METHOD" eyebrow; the headline comes first -->
+    <h1 id="hero-title">Turning Expenses into Wealth <span class="sub">for Individuals and Business Owners</span></h1>
+    <p class="lede">Using our Capital Growth Method, so you can keep more money, grow more money, have greater control over your money and protect your wealth from future taxes.</p>
+    <ul class="benefits">
+      <li><span class="circle"><svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="20" cy="12" rx="11" ry="4"/><path d="M9 12v6c0 2.2 4.9 4 11 4s11-1.8 11-4v-6M9 18v6c0 2.2 4.9 4 11 4 1.4 0 2.8-.1 4-.3M9 24v6c0 2.2 4.9 4 11 4 1 0 2-.1 3-.2M9 30v6c0 2.2 4.9 4 11 4 1.2 0 2.4-.1 3.5-.2"/><circle cx="35" cy="34" r="8"/><path d="M35 30v8M31 34h8"/></svg></span><span>Keep<br>More Money</span></li>
+      <li><span class="circle"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40h32"/><rect x="10" y="30" width="6" height="10" rx="1"/><rect x="21" y="24" width="6" height="16" rx="1"/><rect x="32" y="18" width="6" height="22" rx="1"/><path d="M10 22l9-7 6 4 13-10"/><path d="M32 9h6v6"/></svg></span><span>Grow<br>More Money</span></li>
+      <li><span class="circle"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="6"/><path d="M24 6l3 5 6-1 1 6 5 3-3 5 3 5-5 3-1 6-6-1-3 5-3-5-6 1-1-6-5-3 3-5-3-5 5-3 1-6 6 1z"/></svg></span><span>Greater<br>Control</span></li>
+      <li><span class="circle"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/></svg></span><span>Protect from<br>Future Taxes</span></li>
+    </ul>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="tagline">Power Your Future Without Sacrificing Today.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="#">Watch Our Free Training</a>
+      <a class="btn btn-dark" href="#">Get Your Free Copy Of Our Book</a>
+    </div>
+    <span class="addition">Buttons kept from the current hero (not in the mockup)</span>
+  </div>
+  <div class="hero-photo" role="img" aria-label="A family looking out over the mountains at sunrise"></div>
+</section>
+
+<!-- ===== the live homepage continues unchanged below (screenshot for context) ===== -->
+<div class="context">
+  <span class="label">Existing homepage section (unchanged)</span>
+  <picture>
+    <source media="(max-width: 767px)" srcset="assets/context-mobile.jpg">
+    <img src="assets/context-desktop.jpg" alt="Existing section: Watch This Video To Understand Why Your Money Is Leaving You" width="1440" height="780">
+  </picture>
+</div>
+
+</body>
+</html>
